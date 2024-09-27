@@ -1,0 +1,89 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/login"
+    android:background="?attr/colorSurface"
+    android:gravity="center"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/loginTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Iniciar Sesión"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="32dp"
+        android:textColor="?attr/colorOnSurface"/>
+
+    <EditText
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:id="@+id/emailEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/loginTitle"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/login_txtfield"
+        android:hint="Correo"
+        android:inputType="textEmailAddress"
+        android:padding="15dp"
+        android:textColor="?attr/colorOnSurface"/>
+
+    <EditText
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:id="@+id/passwordEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/emailEditText"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/login_txtfield"
+        android:hint="Contraseña"
+        android:inputType="textPassword"
+        android:padding="15dp"
+        android:textColor="?attr/colorOnSurface"/>
+
+    <Button
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:id="@+id/loginButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/passwordEditText"
+        android:background="@drawable/btn_login"
+        android:padding="12dp"
+        android:text="Iniciar Sesión"
+        android:textAlignment="center"
+        android:textColor="?attr/colorOnSurface"
+        android:textSize="16sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/loginButton"
+        android:layout_marginTop="16dp"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/userIndependentQuestion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="¿Eres usuario independiente?"
+            android:textColor="?attr/colorOnSurface"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/registerText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:focusable="true"
+            android:text=" Registrar"
+            android:textColor="?attr/colorPrimary"
+            android:textSize="14sp"
+            tools:ignore="TouchTargetSizeCheck" />
+    </LinearLayout>
+</RelativeLayout>
