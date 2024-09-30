@@ -1,4 +1,4 @@
 package com.vincentaitzz.bettermanagement.Model;
 
-public class User {
+public class Employee {
 }
