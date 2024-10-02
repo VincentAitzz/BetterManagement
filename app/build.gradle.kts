@@ -43,4 +43,6 @@ dependencies {
 
     implementation("com.google.firebase:firebase-auth:21.0.1")
     implementation("com.google.firebase:firebase-database:20.0.3")
+    implementation("androidx.viewpager2:viewpager2:1.1.0")
+
 }
