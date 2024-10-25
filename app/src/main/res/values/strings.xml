@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">BetterManagement</string>
+    <string-array name="categorias_array">
+        <item>Categoría 1</item>
+        <item>Categoría 2</item>
+        <item>Categoría 3</item>
+    </string-array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

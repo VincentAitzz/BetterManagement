@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/formlogin"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".controller.FormLogin">
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/buttonPrev"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/buttonPrev"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="@drawable/btn_type2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/buttonNext">
+    </Button>
+
+    <Button
+        android:id="@+id/buttonNext"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="@drawable/btn_type2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/buttonPrev"
+        app:layout_constraintEnd_toEndOf="parent">
+    </Button>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
