@@ -7,4 +7,6 @@
     </string-array>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="fragment_one_text">This is an app that will help you to improve your schedule management, in personal way and professional.</string>
+    <string name="fragment_one_image">Example Image</string>
 </resources>

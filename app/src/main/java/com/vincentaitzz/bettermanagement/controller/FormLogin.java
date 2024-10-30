@@ -4,7 +4,10 @@ import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -16,6 +19,10 @@ import androidx.viewpager2.widget.ViewPager2;
 import com.vincentaitzz.bettermanagement.R;
 
 public class FormLogin extends AppCompatActivity {
+
+    private ViewPager2 viewPager;
+    private PagerAdapter adapter;
+    private Button btnPrev, btnNext;
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -29,12 +36,12 @@ public class FormLogin extends AppCompatActivity {
             return insets;
         });
 
-        ViewPager2 viewPager = findViewById(R.id.viewPager);
-        PagerAdapter adapter = new PagerAdapter(this);
+        viewPager = findViewById(R.id.viewPager);
+        adapter = new PagerAdapter(this);
         viewPager.setAdapter(adapter);
 
-        Button btnPrev = findViewById(R.id.buttonPrev);
-        Button btnNext = findViewById(R.id.buttonNext);
+        btnPrev = findViewById(R.id.buttonPrev);
+        btnNext = findViewById(R.id.buttonNext);
 
         btnPrev.setOnClickListener(v -> {
             int currentItem = viewPager.getCurrentItem();
@@ -45,8 +52,19 @@ public class FormLogin extends AppCompatActivity {
 
         btnNext.setOnClickListener(v -> {
             int currentItem = viewPager.getCurrentItem();
-            if (currentItem < adapter.getItemCount() - 1) {
-                viewPager.setCurrentItem(currentItem + 1);
+
+            if (currentItem == 1) {
+                PageTwoFragment currentFragment = (PageTwoFragment) adapter.createFragment(currentItem);
+
+                if (currentFragment.isNameEmpty()) {
+                    Toast.makeText(this, "Por favor, ingresa tu nombre.", Toast.LENGTH_SHORT).show();
+                } else {
+                    viewPager.setCurrentItem(currentItem + 1);
+                }
+            } else {
+                if (currentItem < adapter.getItemCount() - 1) {
+                    viewPager.setCurrentItem(currentItem + 1);
+                }
             }
         });
     }

@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -13,9 +14,12 @@ import androidx.core.view.WindowInsetsCompat;
 
 import com.vincentaitzz.bettermanagement.R;
 
+import org.w3c.dom.Text;
+
 public class SplashScreen extends AppCompatActivity {
 
     private Button btnGetStarted;
+    private TextView signInText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,11 +33,21 @@ public class SplashScreen extends AppCompatActivity {
         });
 
         btnGetStarted = findViewById(R.id.getStartedButton);
+        signInText = findViewById(R.id.signInText);
 
         btnGetStarted.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(getApplicationContext(), FormLogin.class);
+
+                startActivity(i);
+            }
+        });
+
+        signInText.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(getApplicationContext(), CrudCompany.class);
 
                 startActivity(i);
             }

@@ -20,9 +20,8 @@
         android:layout_height="60dp"
         android:background="@drawable/btn_type2"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/buttonNext">
-    </Button>
+        app:layout_constraintEnd_toStartOf="@+id/buttonNext"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/buttonNext"
@@ -30,8 +29,7 @@
         android:layout_height="60dp"
         android:background="@drawable/btn_type2"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/buttonPrev"
-        app:layout_constraintEnd_toEndOf="parent">
-    </Button>
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/buttonPrev" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
