@@ -1,6 +1,7 @@
 package com.vincentaitzz.bettermanagement.controller;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -47,24 +48,17 @@ public class FormLogin extends AppCompatActivity {
             int currentItem = viewPager.getCurrentItem();
             if (currentItem > 0){
                 viewPager.setCurrentItem(currentItem -1);
+            } else if (currentItem == 0) {
+                Intent i = new Intent(getApplicationContext(), SplashScreen.class);
+                startActivity(i);
+
             }
         });
 
         btnNext.setOnClickListener(v -> {
             int currentItem = viewPager.getCurrentItem();
-
-            if (currentItem == 1) {
-                PageTwoFragment currentFragment = (PageTwoFragment) adapter.createFragment(currentItem);
-
-                if (currentFragment.isNameEmpty()) {
-                    Toast.makeText(this, "Por favor, ingresa tu nombre.", Toast.LENGTH_SHORT).show();
-                } else {
-                    viewPager.setCurrentItem(currentItem + 1);
-                }
-            } else {
-                if (currentItem < adapter.getItemCount() - 1) {
-                    viewPager.setCurrentItem(currentItem + 1);
-                }
+            if (currentItem < adapter.getItemCount() - 1) {
+                viewPager.setCurrentItem(currentItem + 1);
             }
         });
     }

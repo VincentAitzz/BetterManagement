@@ -18,7 +18,7 @@
         android:id="@+id/buttonPrev"
         android:layout_width="60dp"
         android:layout_height="60dp"
-        android:background="@drawable/btn_type2"
+        android:background="@drawable/arrow_left"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/buttonNext"
         app:layout_constraintStart_toStartOf="parent" />
@@ -27,7 +27,8 @@
         android:id="@+id/buttonNext"
         android:layout_width="60dp"
         android:layout_height="60dp"
-        android:background="@drawable/btn_type2"
+        android:layout_marginLeft="100dp"
+        android:background="@drawable/arrow_right"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/buttonPrev" />

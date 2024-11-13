@@ -19,8 +19,6 @@ public class PagerAdapter extends FragmentStateAdapter {
                 return new PageOneFragment();
             case 1:
                 return new PageTwoFragment();
-            case 2:
-                return new PageThreeFragment();
             default:
                 return new PageOneFragment();
         }
@@ -28,6 +26,6 @@ public class PagerAdapter extends FragmentStateAdapter {
 
     @Override
     public int getItemCount(){
-        return 3;
+        return 2;
     }
 }
