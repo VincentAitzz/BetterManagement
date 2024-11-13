@@ -1,5 +1,6 @@
 package com.vincentaitzz.bettermanagement.controller;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 
@@ -22,9 +23,9 @@ import com.vincentaitzz.bettermanagement.R;
  */
 public class PageTwoFragment extends Fragment {
 
-    private Button btnRegister;
-    private Button btnRegisterGoogle;
+    private Button btnRegister, btnRegisterGoogle, btnIrEvaluacion;
 
+    @SuppressLint("MissingInflatedId")
     @NonNull
     @Nullable
     @Override
@@ -34,9 +35,15 @@ public class PageTwoFragment extends Fragment {
 
         btnRegister = view.findViewById(R.id.goToRegister);
         btnRegisterGoogle = view.findViewById(R.id.buttonGoogleRegister);
+        btnIrEvaluacion = view.findViewById(R.id.goToEvaluation);
 
         btnRegister.setOnClickListener(v -> {
             Intent i = new Intent(getContext(), RegisterInApp.class);
+            startActivity(i);
+        });
+
+        btnIrEvaluacion.setOnClickListener(v -> {
+            Intent i = new Intent(getContext(), CrudSchedules.class);
             startActivity(i);
         });
         return view;

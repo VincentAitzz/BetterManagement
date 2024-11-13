@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/main"
+    android:padding="16dp"
+    tools:context=".controller.CrudSchedules">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Registrar Horario"
+        android:textSize="24sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:textColor="?attr/android:textColor"/>
+
+    <Spinner
+        android:id="@+id/user_spinner"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <EditText
+        android:id="@+id/hora_inicio_input"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:hint="Hora Inicio (HH:mm)"
+        app:layout_constraintTop_toBottomOf="@id/user_spinner"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <EditText
+        android:id="@+id/hora_termino_input"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:hint="Hora Termino (HH:mm)"
+        app:layout_constraintTop_toBottomOf="@id/hora_inicio_input"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <EditText
+        android:id="@+id/persona_input"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:hint="Persona Responsable"
+        app:layout_constraintTop_toBottomOf="@id/hora_termino_input"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <EditText
+        android:id="@+id/fecha_input"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:hint="Fecha (YYYY-MM-DD)"
+        app:layout_constraintTop_toBottomOf="@id/persona_input"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <Button
+        android:id="@+id/register_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Registrar Horario"
+        app:bgColor="?attr/colorPrimary"
+        app:textColor="?attr/colorOnPrimary"
+        app:layout_constraintTop_toBottomOf="@id/fecha_input"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <ListView
+        android:id="@+id/horario_list_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/register_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

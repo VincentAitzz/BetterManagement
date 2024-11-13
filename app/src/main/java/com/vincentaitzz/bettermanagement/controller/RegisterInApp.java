@@ -44,7 +44,7 @@ public class RegisterInApp extends AppCompatActivity {
 
         registerButton = findViewById(R.id.register_button);
         uploadPhoto = findViewById(R.id.uploadPhoto);
-        backButton = findViewById(R.id.back_button)
+        backButton = findViewById(R.id.back_button);
 
 
     }
