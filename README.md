@@ -8,4 +8,4 @@
 
 Se pide generar un informe con información respecto a la aplicación general.
 
-[**Ver informe**](Informe-de-app.pdf)
+[**Ver informe**](Informe_app.pdf)
