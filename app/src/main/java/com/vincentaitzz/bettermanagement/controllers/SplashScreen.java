@@ -34,7 +34,8 @@ public class SplashScreen extends AppCompatActivity {
         signInText = findViewById(R.id.signInText);
 
         btnGetStarted.setOnClickListener(v -> {
-
+            Intent i = new Intent(getApplicationContext(), FormLogin.class);
+            startActivity(i);
         });
     }
 }

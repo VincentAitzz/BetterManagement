@@ -13,7 +13,7 @@
         android:theme="@style/Theme.BetterManagement"
         tools:targetApi="31">
         <activity
-            android:name=".controllers.SplashScreen"
+            android:name=".controllers.FormLogin"
             android:exported="false" />
         <activity
             android:name=".controllers.SplashScreen"
