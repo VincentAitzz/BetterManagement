@@ -1,7 +1,21 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
     <style name="Base.Theme.BetterManagement" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your dark theme here. -->
-        <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
+        <item name="colorPrimary">@color/green_primary</item>
+        <item name="colorPrimaryVariant">@color/green_primary_variant</item>
+        <item name="colorOnPrimary">@color/dark_green_on_primary</item>
+
+        <item name="colorSecondary">@color/green_secondary</item>
+        <item name="colorSecondaryVariant">@color/green_secondary_variant</item>
+        <item name="colorOnSecondary">@color/dark_green_on_secondary</item>
+
+        <item name="colorOnBackground">@color/dark_green_on_background</item>
+
+        <item name="colorSurface">@color/dark_green_surface</item>
+        <item name="colorOnSurface">@color/dark_green_on_surface</item>
+
+        <item name="colorError">@color/error</item>
+        <item name="colorOnError">@color/dark_green_on_error</item>
+
+        <item name="android:textColor">@color/dark_green_text_primary</item>
     </style>
 </resources>

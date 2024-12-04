@@ -1,5 +1,12 @@
 <resources>
     <string name="app_name">BetterManagement</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="fragment_one_text">This is an app that will help you to improve your schedule management, in personal way and professional.</string>
+    <string name="fragment_two_text">Your schedule improvement begins here, we present our user registration, you can log in with your Google account or go through a user registration.</string>
+    <string name="fragment_one_image">Example Image</string>
+    <string name="back_button_desc">Back to Splash</string>
+    <string name="profile_image_desc">profile image</string>
+    <string name="username_hint">Example: Jorge Lopez</string>
+    <string name="password_hint">Example: aQ4frQz</string>
+    <string name="register_button_text">Button Register</string>
 </resources>

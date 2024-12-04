@@ -1,5 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <color name="green_primary">#4CAF50</color>
+    <color name="green_primary_variant">#388E3C</color>
+    <color name="green_secondary">#81C784</color>
+    <color name="green_secondary_variant">#66BB6A</color>
+    <color name="light_green_background">#FAFAFA</color>
+    <color name="light_green_surface">#FFFFFF</color>
+    <color name="error">#F44336</color>
+    <color name="light_green_on_primary">#FFFFFF</color>
+    <color name="light_green_on_secondary">#212121</color>
+    <color name="light_green_on_background">#212121</color>
+    <color name="light_green_on_surface">#212121</color>
+    <color name="light_green_on_error">#FFFFFF</color>
+    <color name="light_green_text_primary">#212121</color>
+    <color name="light_green_text_secondary">#757575</color>
+
+    <color name="dark_green_background">#121212</color>
+    <color name="dark_green_surface">#1E1E1E</color>
+    <color name="dark_green_on_primary">#FFFFFF</color>
+    <color name="dark_green_on_secondary">#FFFFFF</color>
+    <color name="dark_green_on_background">#FAFAFA</color>
+    <color name="dark_green_on_surface">#FAFAFA</color>
+    <color name="dark_green_on_error">#FFFFFF</color>
+    <color name="dark_green_text_primary">#FAFAFA</color>
+    <color name="dark_green_text_secondary">#B6B6B6</color>
+
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="nav_background">#80000000</color>
+
+    <color name="fragment1">#f37fb7</color>
+    <color name="fragment2">#7ff3c2</color>
+    <color name="fragment3">#f3ce7f</color>
 </resources>

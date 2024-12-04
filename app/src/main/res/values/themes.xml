@@ -1,8 +1,23 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
     <style name="Base.Theme.BetterManagement" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="colorPrimary">@color/green_primary</item>
+        <item name="colorPrimaryVariant">@color/green_primary_variant</item>
+        <item name="colorOnPrimary">@color/light_green_on_primary</item>
+
+        <item name="colorSecondary">@color/green_secondary</item>
+        <item name="colorSecondaryVariant">@color/green_secondary_variant</item>
+        <item name="colorOnSecondary">@color/light_green_on_secondary</item>
+
+        <item name="colorOnBackground">@color/light_green_on_background</item>
+
+        <item name="colorSurface">@color/light_green_surface</item>
+        <item name="colorOnSurface">@color/light_green_on_surface</item>
+
+        <item name="colorError">@color/error</item>
+        <item name="colorOnError">@color/light_green_on_error</item>
+
+        <item name="android:textColor">@color/light_green_text_primary</item>
     </style>
 
     <style name="Theme.BetterManagement" parent="Base.Theme.BetterManagement" />
