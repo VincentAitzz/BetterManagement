@@ -13,6 +13,12 @@
         android:theme="@style/Theme.BetterManagement"
         tools:targetApi="31">
         <activity
+            android:name=".controllers.Home"
+            android:exported="false" />
+        <activity
+            android:name=".controllers.RegisterInApp"
+            android:exported="false" />
+        <activity
             android:name=".controllers.FormLogin"
             android:exported="false" />
         <activity
