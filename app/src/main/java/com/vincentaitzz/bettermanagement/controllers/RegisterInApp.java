@@ -41,6 +41,13 @@ public class RegisterInApp extends AppCompatActivity {
 
         auth = new FirebaseManager();
 
+        if (auth.isUserSignedIn()){
+            Intent i = new Intent(getApplicationContext(), Home.class);
+            startActivity(i);
+            finish();
+            return;
+        }
+
         nameInput = findViewById(R.id.username_input);
         pwdInput = findViewById(R.id.password_input);
         confirmPwdInput = findViewById(R.id.confirm_password_input);

@@ -51,4 +51,8 @@ public class FirebaseManager {
     public FirebaseUser getCurrentUser(){
         return auth.getCurrentUser();
     }
+
+    public boolean isUserSignedIn(){
+        return auth.getCurrentUser() != null;
+    }
 }
