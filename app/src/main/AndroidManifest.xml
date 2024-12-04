@@ -13,6 +13,9 @@
         android:theme="@style/Theme.BetterManagement"
         tools:targetApi="31">
         <activity
+            android:name=".controllers.SignIn"
+            android:exported="false" />
+        <activity
             android:name=".controllers.Home"
             android:exported="false" />
         <activity

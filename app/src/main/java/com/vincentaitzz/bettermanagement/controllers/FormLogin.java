@@ -18,6 +18,7 @@ public class FormLogin extends AppCompatActivity {
     private ViewPager2 viewPager;
     private PagerAdapter adapter;
     private Button btnPrev, btnNext;
+    private FirebaseManager auth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +30,15 @@ public class FormLogin extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
+        auth = new FirebaseManager();
+
+        if (auth.isUserSignedIn()){
+            Intent i = new Intent(getApplicationContext(), Home.class);
+            startActivity(i);
+            finish();
+            return;
+        }
 
         viewPager = findViewById(R.id.viewPager);
         btnPrev = findViewById(R.id.buttonPrev);
@@ -43,6 +53,7 @@ public class FormLogin extends AppCompatActivity {
                 viewPager.setCurrentItem(currentItem - 1);
             }else if(currentItem == 0){
                 Intent i = new Intent(getApplicationContext(), SplashScreen.class);
+                startActivity(i);
             }
         });
 
@@ -52,5 +63,7 @@ public class FormLogin extends AppCompatActivity {
                 viewPager.setCurrentItem(currentItem + 1);
             }
         });
+
+
     }
 }

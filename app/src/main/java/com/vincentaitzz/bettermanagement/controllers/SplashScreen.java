@@ -18,6 +18,7 @@ public class SplashScreen extends AppCompatActivity {
 
     private Button btnGetStarted;
     private TextView signInText;
+    private FirebaseManager auth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,12 +31,28 @@ public class SplashScreen extends AppCompatActivity {
             return insets;
         });
 
+        auth = new FirebaseManager();
+
+        if (auth.isUserSignedIn()){
+            Intent i = new Intent(getApplicationContext(), Home.class);
+            startActivity(i);
+            finish();
+            return;
+        }
+
         btnGetStarted = findViewById(R.id.getStartedButton);
         signInText = findViewById(R.id.signInText);
 
         btnGetStarted.setOnClickListener(v -> {
             Intent i = new Intent(getApplicationContext(), FormLogin.class);
             startActivity(i);
+            finish();
+        });
+
+        signInText.setOnClickListener(v -> {
+            Intent i = new Intent(getApplicationContext(), SignIn.class);
+            startActivity(i);
+            finish();
         });
     }
 }
