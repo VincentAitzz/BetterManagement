@@ -4,24 +4,22 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
-import com.google.firebase.auth.AuthResult;
 import com.vincentaitzz.bettermanagement.R;
 import com.vincentaitzz.bettermanagement.models.User;
 
 public class SignIn extends AppCompatActivity {
 
     private EditText txtEmail, txtPassword;
+    private TextView txtException;
     private Button btnSignIn;
     private FirebaseManager auth;
 
@@ -40,15 +38,16 @@ public class SignIn extends AppCompatActivity {
 
         txtEmail = findViewById(R.id.txtEmail);
         txtPassword = findViewById(R.id.txtPassword);
+        txtException = findViewById(R.id.txtExceptionShow);
 
         btnSignIn = findViewById(R.id.btnSignIn);
 
         btnSignIn.setOnClickListener(v -> {
-            String email = txtEmail.getText().toString().trim();
-            String password = txtPassword.getText().toString().trim();
+            String email = txtEmail.getText().toString();
+            String password = txtPassword.getText().toString();
 
-            if (email.isEmpty() || password.isEmpty()) {
-                Toast.makeText(this, "Por favor, completa todos los campos", Toast.LENGTH_SHORT).show();
+            if(email.isEmpty() || password.isEmpty()){
+                Toast.makeText(this,"Por favor, complete todos los campos",Toast.LENGTH_SHORT).show();
                 return;
             }
 
@@ -56,16 +55,17 @@ public class SignIn extends AppCompatActivity {
             userData.setEMAIL(email);
             userData.setPASSWORD(password);
 
-            auth.signIn(userData, new OnCompleteListener<AuthResult>() {
-                @Override
-                public void onComplete(@NonNull Task<AuthResult> task) {
-                    if (task.isSuccessful()) {
-                        Toast.makeText(SignIn.this, "Inicio de sesión exitoso", Toast.LENGTH_SHORT).show();
-                        Intent i = new Intent(getApplicationContext(), Home.class);
-                        startActivity(i);
-                    } else {
-                        Toast.makeText(SignIn.this, "Error al iniciar sesión: " + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
-                    }
+
+            auth.signIn(userData, task -> {
+                if (task.isSuccessful()) {
+                    Toast.makeText(SignIn.this, "Inicio de sesión exitoso", Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(getApplicationContext(), Home.class);
+                    startActivity(intent);
+                    finish();
+                } else {
+                    String errorMessage = task.getException() != null ? task.getException().getMessage() : "Error desconocido";
+                    Toast.makeText(SignIn.this, "Error al iniciar sesión: " + errorMessage, Toast.LENGTH_SHORT).show();
+                    txtException.setText(errorMessage);
                 }
             });
         });

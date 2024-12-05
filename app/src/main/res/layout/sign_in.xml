@@ -47,4 +47,12 @@
         app:layout_constraintHorizontal_bias="0.5"
         android:layout_marginTop="24dp"/>
 
+    <TextView
+        android:id="@+id/txtExceptionShow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        tools:layout_editor_absoluteX="174dp"
+        tools:layout_editor_absoluteY="449dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
