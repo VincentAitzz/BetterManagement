@@ -14,9 +14,6 @@ import com.vincentaitzz.bettermanagement.R;
 
 public class Home extends AppCompatActivity {
 
-    private Button btn;
-    private FirebaseManager auth;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,14 +25,5 @@ public class Home extends AppCompatActivity {
             return insets;
         });
 
-        btn = findViewById(R.id.btnLogOut);
-        auth = new FirebaseManager();
-
-        btn.setOnClickListener(v -> {
-            auth.signOut();
-            Intent i = new Intent(getApplicationContext(), SplashScreen.class);
-            startActivity(i);
-            finish();
-        });
     }
 }

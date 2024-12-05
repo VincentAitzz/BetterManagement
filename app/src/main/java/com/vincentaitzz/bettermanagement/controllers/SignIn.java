@@ -38,7 +38,6 @@ public class SignIn extends AppCompatActivity {
 
         txtEmail = findViewById(R.id.txtEmail);
         txtPassword = findViewById(R.id.txtPassword);
-        txtException = findViewById(R.id.txtExceptionShow);
 
         btnSignIn = findViewById(R.id.btnSignIn);
 
@@ -65,7 +64,6 @@ public class SignIn extends AppCompatActivity {
                 } else {
                     String errorMessage = task.getException() != null ? task.getException().getMessage() : "Error desconocido";
                     Toast.makeText(SignIn.this, "Error al iniciar sesión: " + errorMessage, Toast.LENGTH_SHORT).show();
-                    txtException.setText(errorMessage);
                 }
             });
         });
