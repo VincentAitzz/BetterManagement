@@ -2,6 +2,17 @@
 
 BetterManagement es una app aun en desarrollo, cuya funcion principal es el poder realizar una gestion de actividades importantes o una gestion de horarios eficiente.
 
+## Índice
+
+- [Características](#características)
+- [Tecnologías Utilizadas](#tecnologías-utilizadas)
+- [Imágenes](#imágenes)
+- [Instalación](#instalación)
+- [Uso](#uso)
+- [Contribuciones](#contribuciones)
+- [Licencia](#licencia)
+- [Contacto](#contacto)
+
 ## Características.
 
 - **Autenticación de Usuarios**: Implementación de inicio de sesión y registro utilizando Firebase.
@@ -14,6 +25,25 @@ BetterManagement es una app aun en desarrollo, cuya funcion principal es el pode
 - **Firebase**: Para autenticación y almacenamiento de datos.
 - **MQTT**: Protocolo utilizado para la funcionalidad de chat.
 - **Java/Kotlin**: Lenguajes de programación utilizados para el desarrollo de la aplicación Android.
+
+## Imágenes
+
+### Pantallas de la Aplicación
+
+<div style="display: flex; flex-wrap: wrap; justify-content: space-around;">
+
+<img src="https://github.com/VincentAitzz/BetterManagement/blob/master/ss/splashScreen.jpeg" alt="Splash Screen" width="150" style="margin: 10px;"/>
+<img src="https://github.com/VincentAitzz/BetterManagement/blob/master/ss/signIn.jpeg" alt="Sign In" width="150" style="margin: 10px;"/>
+<img src="https://github.com/VincentAitzz/BetterManagement/blob/master/ss/signUp.jpeg" alt="Sign Up" width="150" style="margin: 10px;"/>
+<img src="https://github.com/VincentAitzz/BetterManagement/blob/master/ss/homeSchedules.jpeg" alt="Home Schedules" width="150" style="margin: 10px;"/>
+<img src="https://github.com/VincentAitzz/BetterManagement/blob/master/ss/firstPage.jpeg" alt="First Page" width="150" style="margin: 10px;"/>
+<img src="https://github.com/VincentAitzz/BetterManagement/blob/master/ss/secondPage.jpeg" alt="Second Page" width="150" style="margin: 10px;"/>
+<img src="https://github.com/VincentAitzz/BetterManagement/blob/master/ss/menuView.jpeg" alt="Menu View" width="150" style="margin: 10px;"/>
+<img src="https://github.com/VincentAitzz/BetterManagement/blob/master/ss/options.jpeg" alt="Options" width="150" style="margin: 10px;"/>
+<img src="https://github.com/VincentAitzz/BetterManagement/blob/master/ss/postEditSchedule.jpeg" alt="Post Edit Schedule" width="150" style="margin: 10px;"/>
+<img src="https://github.com/VincentAitzz/BetterManagement/blob/master/ss/mqttMessages.jpeg" alt="MQTT Messages" width="150" style="margin: 10px;"/>
+
+</div>
 
 ## Instalación.
 
@@ -40,24 +70,6 @@ Instrucciones sobre cómo utilizar la aplicación. Incluye ejemplos si es necesa
 2. Accede a la funcionalidad de chat para enviar y recibir mensajes.
 3. Utiliza las funciones CRUD para gestionar tus horarios.
 
-## Imágenes
-
-### Pantallas de la Aplicación
-
-<div style="display: flex; flex-wrap: wrap; justify-content: space-around;">
-
-<img src="https://github.com/VincentAitzz/BetterManagement/blob/master/ss/splashScreen.jpeg" alt="Splash Screen" width="150" style="margin: 10px;"/>
-<img src="https://github.com/VincentAitzz/BetterManagement/blob/master/ss/signIn.jpeg" alt="Sign In" width="150" style="margin: 10px;"/>
-<img src="https://github.com/VincentAitzz/BetterManagement/blob/master/ss/signUp.jpeg" alt="Sign Up" width="150" style="margin: 10px;"/>
-<img src="https://github.com/VincentAitzz/BetterManagement/blob/master/ss/homeSchedules.jpeg" alt="Home Schedules" width="150" style="margin: 10px;"/>
-<img src="https://github.com/VincentAitzz/BetterManagement/blob/master/ss/firstPage.jpeg" alt="First Page" width="150" style="margin: 10px;"/>
-<img src="https://github.com/VincentAitzz/BetterManagement/blob/master/ss/secondPage.jpeg" alt="Second Page" width="150" style="margin: 10px;"/>
-<img src="https://github.com/VincentAitzz/BetterManagement/blob/master/ss/menuView.jpeg" alt="Menu View" width="150" style="margin: 10px;"/>
-<img src="https://github.com/VincentAitzz/BetterManagement/blob/master/ss/options.jpeg" alt="Options" width="150" style="margin: 10px;"/>
-<img src="https://github.com/VincentAitzz/BetterManagement/blob/master/ss/postEditSchedule.jpeg" alt="Post Edit Schedule" width="150" style="margin: 10px;"/>
-<img src="https://github.com/VincentAitzz/BetterManagement/blob/master/ss/mqttMessages.jpeg" alt="MQTT Messages" width="150" style="margin: 10px;"/>
-
-</div>
 
 ## Contacto.
 
