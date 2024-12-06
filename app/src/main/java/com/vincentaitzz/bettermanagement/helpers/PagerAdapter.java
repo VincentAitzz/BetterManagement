@@ -1,9 +1,12 @@
-package com.vincentaitzz.bettermanagement.controllers;
+package com.vincentaitzz.bettermanagement.helpers;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
+
+import com.vincentaitzz.bettermanagement.controllers.PageOne;
+import com.vincentaitzz.bettermanagement.controllers.PageTwo;
 
 public class PagerAdapter extends FragmentStateAdapter {
 

@@ -15,9 +15,8 @@ import androidx.core.view.WindowInsetsCompat;
 
 import com.google.firebase.database.DatabaseReference;
 import com.vincentaitzz.bettermanagement.R;
+import com.vincentaitzz.bettermanagement.helpers.FirebaseManager;
 import com.vincentaitzz.bettermanagement.models.User;
-
-import at.favre.lib.crypto.bcrypt.BCrypt;
 
 public class RegisterInApp extends AppCompatActivity {
 

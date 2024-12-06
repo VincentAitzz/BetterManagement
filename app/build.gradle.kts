@@ -36,6 +36,9 @@ android {
 dependencies {
 
     implementation("at.favre.lib:bcrypt:0.9.0")
+    implementation("androidx.localbroadcastmanager:localbroadcastmanager:1.0.0")
+    implementation("org.eclipse.paho:org.eclipse.paho.client.mqttv3:1.2.5")
+    implementation("org.eclipse.paho:org.eclipse.paho.android.service:1.1.1")
     implementation("com.google.android.material:material:<latest-version>")
     implementation("androidx.cardview:cardview:1.0.0")
     implementation(platform("com.google.firebase:firebase-bom:33.2.0"))

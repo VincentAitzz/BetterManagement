@@ -12,6 +12,8 @@ import androidx.core.view.WindowInsetsCompat;
 import androidx.viewpager2.widget.ViewPager2;
 
 import com.vincentaitzz.bettermanagement.R;
+import com.vincentaitzz.bettermanagement.helpers.FirebaseManager;
+import com.vincentaitzz.bettermanagement.helpers.PagerAdapter;
 
 public class FormLogin extends AppCompatActivity {
 

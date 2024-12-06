@@ -1,11 +1,9 @@
 package com.vincentaitzz.bettermanagement.controllers;
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.widget.Button;
-import android.widget.ListView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.annotation.NonNull;
@@ -22,6 +20,8 @@ import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.ValueEventListener;
 import com.vincentaitzz.bettermanagement.R;
+import com.vincentaitzz.bettermanagement.helpers.FirebaseManager;
+import com.vincentaitzz.bettermanagement.helpers.ScheduleAdapter;
 import com.vincentaitzz.bettermanagement.models.Schedule;
 
 import java.util.ArrayList;

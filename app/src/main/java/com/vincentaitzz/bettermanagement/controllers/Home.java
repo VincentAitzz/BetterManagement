@@ -1,6 +1,5 @@
 package com.vincentaitzz.bettermanagement.controllers;
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -15,6 +14,7 @@ import androidx.drawerlayout.widget.DrawerLayout;
 
 import com.google.android.material.navigation.NavigationView;
 import com.vincentaitzz.bettermanagement.R;
+import com.vincentaitzz.bettermanagement.helpers.FirebaseManager;
 
 public class Home extends AppCompatActivity {
 
@@ -52,7 +52,9 @@ public class Home extends AppCompatActivity {
                     finish();
                 } else if (item.getItemId() == R.id.nav_shedules) {
                     startActivity(new Intent(Home.this, Schedules.class));
-                } else if (item.getItemId() == R.id.nav_infoUser) {
+                } else if (item.getItemId() == R.id.nav_msg) {
+                    startActivity(new Intent(Home.this, Chat.class));
+                }else if (item.getItemId() == R.id.nav_infoUser) {
                     startActivity(new Intent(Home.this, InfoUser.class));
                 } else if (item.getItemId() == R.id.nav_logOut) {
                     auth.signOut();

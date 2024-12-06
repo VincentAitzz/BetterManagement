@@ -11,6 +11,7 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import com.vincentaitzz.bettermanagement.R;
+import com.vincentaitzz.bettermanagement.helpers.FirebaseManager;
 import com.vincentaitzz.bettermanagement.models.Schedule;
 
 public class EditSchedule extends AppCompatActivity {

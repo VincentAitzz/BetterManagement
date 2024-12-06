@@ -1,4 +1,4 @@
-package com.vincentaitzz.bettermanagement.controllers;
+package com.vincentaitzz.bettermanagement.helpers;
 
 import androidx.annotation.NonNull;
 

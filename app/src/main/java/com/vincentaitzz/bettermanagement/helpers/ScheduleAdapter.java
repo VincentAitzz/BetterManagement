@@ -1,4 +1,4 @@
-package com.vincentaitzz.bettermanagement.controllers;
+package com.vincentaitzz.bettermanagement.helpers;
 
 import android.app.AlertDialog;
 import android.content.Context;
@@ -11,7 +11,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.google.firebase.Firebase;
+import com.vincentaitzz.bettermanagement.controllers.EditSchedule;
 import com.vincentaitzz.bettermanagement.models.Schedule;
 import com.vincentaitzz.bettermanagement.R;
 import java.util.List;
