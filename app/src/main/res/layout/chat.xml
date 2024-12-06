@@ -21,14 +21,14 @@
         android:orientation="horizontal">
 
         <EditText
-            android:id="@+id/editTextMessage"
+            android:id="@+id/txtMsg"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:hint="Escribe un mensaje" />
 
         <Button
-            android:id="@+id/buttonSend"
+            android:id="@+id/btnSend"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Enviar" />

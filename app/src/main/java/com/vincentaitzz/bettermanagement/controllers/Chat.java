@@ -17,10 +17,6 @@ import com.vincentaitzz.bettermanagement.helpers.ChatAdapter;
 import com.vincentaitzz.bettermanagement.helpers.FirebaseManager;
 import com.vincentaitzz.bettermanagement.helpers.MqttHelper;
 
-import org.eclipse.paho.client.mqttv3.IMqttDeliveryToken;
-import org.eclipse.paho.client.mqttv3.MqttCallback;
-import org.eclipse.paho.client.mqttv3.MqttMessage;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -34,6 +30,9 @@ public class Chat extends AppCompatActivity {
 
     private MqttHelper mqttHelper;
     private FirebaseManager auth;
+    private String _ID;
+    private static final String _BROKER = "tcp://broker.emqx.io:1883";
+    private static final String _TOPIC_SUB = "aitzz/chat";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,54 +48,40 @@ public class Chat extends AppCompatActivity {
 
         auth = new FirebaseManager();
 
+        _ID = auth.getCurrentUser().getUid();
+
         recyclerView = findViewById(R.id.recyclerView);
         chatAdapter = new ChatAdapter(messages);
+        btnSend = findViewById(R.id.btnSend);
+        txtMessage = findViewById(R.id.txtMsg);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setAdapter(chatAdapter);
 
-        String id = auth.getCurrentUser().getUid();
+        mqttHelper = new MqttHelper();
 
-        mqttHelper = new MqttHelper(this, id);
+        mqttHelper.setMessageListener(new MqttHelper.MessageListener() {
+            @Override
+            public void onMessageReceived(String topic, String message) {
+                runOnUiThread(() -> {
+                    messages.add("Tópico: [" + topic + "] : " + message);
+                    chatAdapter.notifyItemInserted(messages.size() - 1);
+                    recyclerView.scrollToPosition(messages.size() - 1);
+                });
+            }
+        });
 
-        try {
-            mqttHelper.connect("", "");
-
-            mqttHelper.subscribe("vincentaitzz/chat", new MqttCallback() {
-                @Override
-                public void connectionLost(Throwable cause) {
-
-                }
-
-                @Override
-                public void messageArrived(String topic, MqttMessage message) throws Exception {
-                    String msg = new String(message.getPayload());
-                    runOnUiThread(() -> {
-                        messages.add(msg);
-                        chatAdapter.notifyItemInserted(messages.size() - 1);
-                        recyclerView.scrollToPosition(messages.size() - 1);
-                    });
-                }
-
-                @Override
-                public void deliveryComplete(IMqttDeliveryToken token) {
-                }
-            });
-
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-
-        txtMessage = findViewById(R.id.editTextMessage);
-        btnSend = findViewById(R.id.buttonSend);
+        mqttHelper.connect(_BROKER,_ID);
+        mqttHelper.subscribe(_TOPIC_SUB);
 
         btnSend.setOnClickListener(v -> {
-            String message = txtMessage.getText().toString();
-            if (!message.isEmpty()) {
-                mqttHelper.publish("vincentaitzz/chat", message);
-                messages.add(message);
-                chatAdapter.notifyItemInserted(messages.size() - 1);
-                recyclerView.scrollToPosition(messages.size() - 1);
+            String data = txtMessage.getText().toString();
+            if(!data.isEmpty()){
+                mqttHelper.publish(_TOPIC_SUB,data);
+                messages.add("I: "+data);
+                chatAdapter.notifyItemInserted(messages.size()-1);
+                recyclerView.scrollToPosition(messages.size()-1);
                 txtMessage.setText("");
+
             }
         });
     }
