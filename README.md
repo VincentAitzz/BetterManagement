@@ -1,26 +1,6 @@
 # BetterManagement.
 
-Descripción breve de la aplicación y su propósito.
-
-## Imágenes
-
-### Pantallas de la Aplicación
-
-<div style="display: flex; flex-wrap: wrap; justify-content: space-around;">
-
-<img src="https://github.com/VincentAitzz/BetterManagement/blob/master/ss/splashScreen.jpeg" alt="Splash Screen" width="150" style="margin: 10px;"/>
-<img src="https://github.com/VincentAitzz/BetterManagement/blob/master/ss/signIn.jpeg" alt="Sign In" width="150" style="margin: 10px;"/>
-<img src="https://github.com/VincentAitzz/BetterManagement/blob/master/ss/signUp.jpeg" alt="Sign Up" width="150" style="margin: 10px;"/>
-<img src="https://github.com/VincentAitzz/BetterManagement/blob/master/ss/homeSchedules.jpeg" alt="Home Schedules" width="150" style="margin: 10px;"/>
-<img src="https://github.com/VincentAitzz/BetterManagement/blob/master/ss/firstPage.jpeg" alt="First Page" width="150" style="margin: 10px;"/>
-<img src="https://github.com/VincentAitzz/BetterManagement/blob/master/ss/secondPage.jpeg" alt="Second Page" width="150" style="margin: 10px;"/>
-<img src="https://github.com/VincentAitzz/BetterManagement/blob/master/ss/menuView.jpeg" alt="Menu View" width="150" style="margin: 10px;"/>
-<img src="https://github.com/VincentAitzz/BetterManagement/blob/master/ss/options.jpeg" alt="Options" width="150" style="margin: 10px;"/>
-<img src="https://github.com/VincentAitzz/BetterManagement/blob/master/ss/postEditSchedule.jpeg" alt="Post Edit Schedule" width="150" style="margin: 10px;"/>
-<img src="https://github.com/VincentAitzz/BetterManagement/blob/master/ss/mqttMessages.jpeg" alt="MQTT Messages" width="150" style="margin: 10px;"/>
-
-</div>
-
+BetterManagement es una app aun en desarrollo, cuya funcion principal es el poder realizar una gestion de actividades importantes o una gestion de horarios eficiente.
 
 ## Características.
 
@@ -60,12 +40,27 @@ Instrucciones sobre cómo utilizar la aplicación. Incluye ejemplos si es necesa
 2. Accede a la funcionalidad de chat para enviar y recibir mensajes.
 3. Utiliza las funciones CRUD para gestionar tus horarios.
 
-## Licencia.
+## Imágenes
 
-Este proyecto está bajo la Licencia MIT - consulta el archivo [LICENSE](LICENSE) para más detalles.
+### Pantallas de la Aplicación
+
+<div style="display: flex; flex-wrap: wrap; justify-content: space-around;">
+
+<img src="https://github.com/VincentAitzz/BetterManagement/blob/master/ss/splashScreen.jpeg" alt="Splash Screen" width="150" style="margin: 10px;"/>
+<img src="https://github.com/VincentAitzz/BetterManagement/blob/master/ss/signIn.jpeg" alt="Sign In" width="150" style="margin: 10px;"/>
+<img src="https://github.com/VincentAitzz/BetterManagement/blob/master/ss/signUp.jpeg" alt="Sign Up" width="150" style="margin: 10px;"/>
+<img src="https://github.com/VincentAitzz/BetterManagement/blob/master/ss/homeSchedules.jpeg" alt="Home Schedules" width="150" style="margin: 10px;"/>
+<img src="https://github.com/VincentAitzz/BetterManagement/blob/master/ss/firstPage.jpeg" alt="First Page" width="150" style="margin: 10px;"/>
+<img src="https://github.com/VincentAitzz/BetterManagement/blob/master/ss/secondPage.jpeg" alt="Second Page" width="150" style="margin: 10px;"/>
+<img src="https://github.com/VincentAitzz/BetterManagement/blob/master/ss/menuView.jpeg" alt="Menu View" width="150" style="margin: 10px;"/>
+<img src="https://github.com/VincentAitzz/BetterManagement/blob/master/ss/options.jpeg" alt="Options" width="150" style="margin: 10px;"/>
+<img src="https://github.com/VincentAitzz/BetterManagement/blob/master/ss/postEditSchedule.jpeg" alt="Post Edit Schedule" width="150" style="margin: 10px;"/>
+<img src="https://github.com/VincentAitzz/BetterManagement/blob/master/ss/mqttMessages.jpeg" alt="MQTT Messages" width="150" style="margin: 10px;"/>
+
+</div>
 
 ## Contacto.
 
-Tu nombre - [v.andrehpavez@gmail.com](mailto:v.andrehpavez@gmail.com)
+Vicente Pavez - [v.andrehpavez@gmail.com](mailto:v.andrehpavez@gmail.com)
 
 Proyecto Link: [https://github.com/VincentAitzz/BetterManagement](https://github.com/VincentAitzz/BetterManagement)
