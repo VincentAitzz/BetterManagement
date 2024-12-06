@@ -1,9 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
-        android:id="@+id/nav_item1"
-        android:title="Item 1"/>
+        android:id="@+id/nav_home"
+        android:title="Home"/>
     <item
-        android:id="@+id/nav_item2"
-        android:title="Item 2"/>
+        android:id="@+id/nav_shedules"
+        android:title="Schedules"/>
+    <item
+        android:id="@+id/nav_infoUser"
+        android:title="Profile"/>
+    <item
+        android:id="@+id/nav_logOut"
+        android:title="LogOut"/>
 </menu>

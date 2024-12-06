@@ -36,6 +36,7 @@ android {
 dependencies {
 
     implementation("at.favre.lib:bcrypt:0.9.0")
+    implementation("com.google.android.material:material:<latest-version>")
     implementation("androidx.cardview:cardview:1.0.0")
     implementation(platform("com.google.firebase:firebase-bom:33.2.0"))
     implementation("com.google.firebase:firebase-auth")
