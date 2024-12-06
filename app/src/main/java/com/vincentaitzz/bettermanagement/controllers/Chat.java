@@ -16,6 +16,7 @@ import com.vincentaitzz.bettermanagement.R;
 import com.vincentaitzz.bettermanagement.helpers.ChatAdapter;
 import com.vincentaitzz.bettermanagement.helpers.FirebaseManager;
 import com.vincentaitzz.bettermanagement.helpers.MqttHelper;
+import com.vincentaitzz.bettermanagement.models.Message;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -26,7 +27,7 @@ public class Chat extends AppCompatActivity {
     private Button btnSend;
     private RecyclerView recyclerView;
     private ChatAdapter chatAdapter;
-    private List<String> messages = new ArrayList<>();
+    private List<Message> messages = new ArrayList<>();
 
     private MqttHelper mqttHelper;
     private FirebaseManager auth;
@@ -47,6 +48,7 @@ public class Chat extends AppCompatActivity {
         });
 
         auth = new FirebaseManager();
+        messages = new ArrayList<>();
 
         _ID = auth.getCurrentUser().getUid();
 
@@ -63,9 +65,11 @@ public class Chat extends AppCompatActivity {
             @Override
             public void onMessageReceived(String topic, String message) {
                 runOnUiThread(() -> {
-                    messages.add("Tópico: [" + topic + "] : " + message);
-                    chatAdapter.notifyItemInserted(messages.size() - 1);
-                    recyclerView.scrollToPosition(messages.size() - 1);
+                    if (!messages.contains(new Message(message, false))) {
+                        messages.add(new Message(message, false));
+                        chatAdapter.notifyItemInserted(messages.size() - 1);
+                        recyclerView.scrollToPosition(messages.size() - 1);
+                    }
                 });
             }
         });
@@ -75,13 +79,12 @@ public class Chat extends AppCompatActivity {
 
         btnSend.setOnClickListener(v -> {
             String data = txtMessage.getText().toString();
-            if(!data.isEmpty()){
-                mqttHelper.publish(_TOPIC_SUB,data);
-                messages.add("I: "+data);
-                chatAdapter.notifyItemInserted(messages.size()-1);
-                recyclerView.scrollToPosition(messages.size()-1);
+            if (!data.isEmpty()) {
+                mqttHelper.publish(_TOPIC_SUB, data);
+                messages.add(new Message(data, true));
+                chatAdapter.notifyItemInserted(messages.size() - 1);
+                recyclerView.scrollToPosition(messages.size() - 1);
                 txtMessage.setText("");
-
             }
         });
     }
